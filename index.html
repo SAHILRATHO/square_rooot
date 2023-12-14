@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Square Root Calculator</h1>
+      
+        <div class="text"> 
+              <label for="v1"> Enter A Number:</label>
+              <input type="number" id="v1"><br> <br>
+       </div>
+    
+      <div class="btn"> 
+       <input type="button"  id="enter" value="calculate Square Root" onclick="squareRoot()">
+      
+      </div>
+     <div class="text"> 
+      <p id="sum"></p>
+     </div>
+  </div>
+<script>
+   function squareRoot() {
+            var num1 = parseFloat(document.getElementById("v1").value)
+
+            if (!isNaN(num1)) {
+                var root =Math.sqrt(num1)
+                document.getElementById("sum").innerHTML = `Tha Area Of Tha Triangle Is:${root}`
+            }
+            else {
+                document.getElementById("sum").innerText = "Plase enter a valid number"
+            }
+        }
+
+
+
+</script>
+</body>
+</html>
